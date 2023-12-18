@@ -23,7 +23,8 @@ print(_list, _tuple, _set, _dict)
 
 # functions
 def my_fun(name,  # must be a str
-           age, children):
+           age,  # must be integer between 0 and 100
+           children):
     print(name, "'s age is", age, "and has", children, "children")
 
 

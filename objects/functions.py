@@ -6,7 +6,7 @@ f = square
 print(f(3))
 
 
-# function can be passes as args
+# function can be passed as args
 def cube(sq_fun, num):
     return sq_fun(num) * num
 
@@ -15,7 +15,7 @@ c = cube
 print(c(f, 4))
 
 
-# functions can return other function
+# functions can return another function
 def choose(id):
     if id == 1:
         return square

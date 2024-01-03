@@ -15,6 +15,6 @@ class B(A):
 if __name__ == '__main__':
     a = A()
     b = B()
-    print(b._B__var, 'from direct access')  # name mangling
-    print(a._A__var, 'from direct access')
+    print(b._B__var, 'from direct access-b')  # name mangling, internally python stores that var in that form
+    print(A._var, 'from direct access-a')  # normal accessing
     print(b.get_var(), "from method")

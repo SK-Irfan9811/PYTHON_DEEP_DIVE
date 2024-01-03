@@ -12,7 +12,7 @@ def compare_using_equals(n):
 
 def compare_using_interning(n):
     a = sys.intern('I get interned I dont get interned' * 200)
-    b = sys.intern('I get interned I dont get interned' * 200)
+    b = sys.intern('I ge interned I dont get interned' * 200)
     for _ in range(n):
         if a is b:
             pass

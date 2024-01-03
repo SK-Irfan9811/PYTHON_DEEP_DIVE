@@ -1,4 +1,4 @@
-# triple quoted string is just a normal string
+# triple-quoted string is just a normal string
 # it will allow us to jump to new lines with exact stdout
 
 string = """This \n

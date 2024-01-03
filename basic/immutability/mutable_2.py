@@ -12,4 +12,4 @@ print("final id", id(ll))
 a = [9, 8, 7]
 b = [9, 8, 7]
 print(id(a), id(b))
-# for mutable objects addresses will be different always
+# for mutable objects, addresses will be different always

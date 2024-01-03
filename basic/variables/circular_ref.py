@@ -43,3 +43,9 @@ print("refcount of B -", ref_count(b_id))
 
 print(object_by_id(a_id))
 print(object_by_id(b_id))
+
+# random code
+p = [101010, 1010]
+p_id = id(p)
+p = None
+print(ref_count(p_id))

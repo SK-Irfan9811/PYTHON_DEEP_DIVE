@@ -2,7 +2,7 @@ t = [1, 2]
 try:
     t[0] += 2
 except TypeError:
-    print(t)
+    print("from except", t)
 print(t)
 
 a = [100, 200]

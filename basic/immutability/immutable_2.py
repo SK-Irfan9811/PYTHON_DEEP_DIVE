@@ -7,6 +7,6 @@ print(id(a))
 x = 10
 y = 10
 print(id(x), id(y))
-x = 257000
-y = 257000
+x = 257000009898
+y = 257000009898
 print(id(x), id(y))

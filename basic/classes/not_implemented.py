@@ -22,5 +22,5 @@ class B:
 
 a = A(1)
 b = B(1)
-print("from a", a == b)
+print("from a", a == b)  # this will call "b==a" as "a==b" is false
 print("from b", b == a)

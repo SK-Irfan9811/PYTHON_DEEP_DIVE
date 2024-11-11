@@ -65,4 +65,6 @@ print(r2 > r3)
 r1.width = 2024
 r1.height = 2024
 print(r1.area(), r1.perimeter())
-# r4 = Rectangle(-100, -200)  raises error
+print(str(r1))
+print(repr(r1))
+# r4 = Rectangle(-100, -200)  #raises error

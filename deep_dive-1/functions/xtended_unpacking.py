@@ -49,3 +49,6 @@ s3 = {5, 6, 7}
 s4 = {7, 8, 9}
 print({*s1, *s2, *s3, *s4})  # comparitively easy with union capability s1.union(s2,s3,s4)
 print(s1.union(s2, s4, s3))
+
+a, *b, (c) = [1, 2, 3, 4, "Python"]
+print(a, b, c)

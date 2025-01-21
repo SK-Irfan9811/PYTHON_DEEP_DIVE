@@ -1,3 +1,6 @@
+import time
+
+
 class A:
     _var = 10
 
@@ -18,3 +21,4 @@ if __name__ == '__main__':
     print(b._B__var, 'from direct access-b')  # name mangling, internally python stores that var in that form
     print(A._var, 'from direct access-a')  # normal accessing
     print(b.get_var(), "from method")
+

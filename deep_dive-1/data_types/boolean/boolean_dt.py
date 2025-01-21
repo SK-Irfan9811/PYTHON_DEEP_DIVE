@@ -31,3 +31,7 @@ a = None
 if a is not None and len(a):  # none has no len()
     print("hello")
 print(bool(a))
+
+
+res=2 and 3
+print(res)

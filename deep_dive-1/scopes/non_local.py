@@ -100,7 +100,7 @@
 # outer()
 # print(x)
 
-#non local won't create any variable if not present in the enclosing scopes
+# non local won't create any variable if not present in the enclosing scopes
 # def outer():
 #     global x
 #     x="Monty"
@@ -111,3 +111,15 @@
 # outer()
 
 
+def outer():
+    x = "outer"
+
+    def inner():
+        x="inner"
+        print(x)
+
+    return inner
+
+
+f = outer()
+f()

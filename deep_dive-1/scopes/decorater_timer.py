@@ -21,14 +21,14 @@ def timed(fn):
 
 # fib using recursion
 
-def fib_with_mem(n, cache={}):
+def fib_with_mem(n, cache={1: 1, 2: 1}):
     if n <= 2:
-        return 1
+        return cache[n]
     if n in cache:
         return cache[n]
-    result = fib_with_mem(n - 1) + fib_with_mem(n - 2)
-    cache[n] = result
-    return result
+    cache[n] = fib_with_mem(n - 1) + fib_with_mem(n - 2)
+
+    return cache[n]
 
 
 @timed
@@ -40,55 +40,56 @@ print(get_fib(40))
 
 
 # with loop
-@timed
-def fib_with_loop(n):
-    a = 0
-    b = 1
-    for i in range(1, n):
-        a, b = b, a + b
-
-    return b
-
-
-print(fib_with_loop(40))
-
-
-# with reduce function
-@timed
-def fib_with_reduce(n):
-    from functools import reduce
-    initial = (1, 0)
-    return reduce(lambda prev, a: (prev[0] + prev[1], prev[0]), range(n), initial)[1]
-
-
-print(fib_with_reduce(40))
-
-
-# logger example
-def logged(fn):
-    from functools import wraps
-    from datetime import datetime, timezone
-    @wraps(fn)
-    def inner(*args, **kwargs):
-        dt = datetime.now(timezone.utc)
-        result = fn(*args, **kwargs)
-        print("{0} is called at {1}".format(fn.__name__, dt))
-        return result
-
-    return inner
-
-
-@logged
-def f1():
-    pass
-
-f1()
-time.sleep(2)
-@logged
-def f2():
-    pass
-
-
-
-
-f2()
+# @timed
+# def fib_with_loop(n):
+#     a = 0
+#     b = 1
+#     for i in range(1, n):
+#         a, b = b, a + b
+#
+#     return b
+#
+#
+# print(fib_with_loop(40))
+#
+#
+# # with reduce function
+# @timed
+# def fib_with_reduce(n):
+#     from functools import reduce
+#     initial = (1, 0)
+#     return reduce(lambda prev, a: (prev[0] + prev[1], prev[0]), range(n), initial)[1]
+#
+#
+# print(fib_with_reduce(40))
+#
+#
+# # logger example
+# def logged(fn):
+#     from functools import wraps
+#     from datetime import datetime, timezone
+#     @wraps(fn)
+#     def inner(*args, **kwargs):
+#         dt = datetime.now(timezone.utc)
+#         result = fn(*args, **kwargs)
+#         print("{0} is called at {1}".format(fn.__name__, dt))
+#         return result
+#
+#     return inner
+#
+#
+# @logged
+# def f1():
+#     pass
+#
+#
+# f1()
+# time.sleep(2)
+#
+#
+# @logged
+# def f2():
+#     pass
+#
+#
+# f2()

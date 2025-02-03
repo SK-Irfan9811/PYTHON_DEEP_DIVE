@@ -50,12 +50,12 @@ def htmlize(arg):
     return fn(arg)
 
 
-print(htmlize("""This 
-is Irfan&&"""))
-print(htmlize(143))
-print(htmlize([1,2,3,4]))
-print(htmlize((1,2,3,4)))
-print(htmlize(({1:2,2:3})))
-print(htmlize(2.3455))
-print(htmlize("&&&&&7"))
-print(htmlize([1,2,[200],"%$$"]))
+# print(htmlize("""This
+# is Irfan&&"""))
+# print(htmlize(143))
+# print(htmlize([1,2,3,4]))
+# print(htmlize((1,2,3,4)))
+# print(htmlize(({1:2,2:3})))
+# print(htmlize(2.3455))
+# print(htmlize("&&&&&7"))
+# print(htmlize([1,2,[200],"%$$"]))
